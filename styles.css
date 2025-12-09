@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#slideshow {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Background para PC */
+    background-image: url("images/background.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#slideshow img {
+    object-fit: contain;
+    width: auto;
+    height: 80%;  /* PC → usa altura */
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    #slideshow {
+        background-image: url("images/mobilebackground.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    #slideshow img {
+        width: 90%;
+        height: auto; /* Celular → usa largura */
+    }
+}
